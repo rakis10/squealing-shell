@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://rakis10.github.io',
-    // base: 'squealing-shell',
+    base: 'squealing-shell',
 });
