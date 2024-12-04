@@ -10,10 +10,7 @@ import background from '../assets/background.svg';
 			<a href="https://astro.build"
 				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
 			>
-			<h1>Temeraf</h1>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
+			<slot/>
 			<section id="links">
 				<a class="button" href="https://docs.astro.build">Read our docs</a>
 				<a href="https://astro.build/chat"
@@ -42,7 +39,7 @@ import background from '../assets/background.svg';
 	</a>
 </div>
 
-<style>
+<style >
 	#background {
 		position: fixed;
 		top: 0;
@@ -206,5 +203,5 @@ import background from '../assets/background.svg';
 		h1 {
 			line-height: 1.5;
 		}
-	}
+	
 </style>

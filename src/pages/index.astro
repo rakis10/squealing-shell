@@ -1,4 +1,5 @@
 ---
+import Link from '../components/Link.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -7,6 +8,13 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
-	<a href="/demo">Go to Demo Page</a>
+	<Welcome>
+		<div id="links">
+			<h1>Temeraf</h1>
+			<Link link="demo" title="Demo Page" />
+			<h1>
+				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
+			</h1>
+		</div>
+	</Welcome>
 </Layout>

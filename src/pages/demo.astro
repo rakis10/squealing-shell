@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import Welcome from "../components/Welcome.astro";
+import Link from "../components/Link.astro";
 
 ---
 <Layout>
-    <h1>My Demo Page</h1>
-    <p>This is a demo page. It's a great place to experiment with new ideas and features.</p>
-    <p>Click the link below to go back to the home page.</p>
-    <a href="/">Go to Home Page</a>
+    <Welcome>
+
+        <h1>My Demo Page</h1>
+        <p>This is a demo page. It's a great place to experiment with new ideas and features.</p>
+        <p>Click the link below to go back to the home page.</p>
+        <Link link="" title="back">
+    </Welcome>
 </Layout>
