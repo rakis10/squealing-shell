@@ -1,188 +1,128 @@
 ---
+import Maincontent from "../components/Maincontent.astro";
+import Navbar from "../components/Navbar.astro";
 import styles from "../styles.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Astro Landing Page</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="../styles/tailwind.css" rel="stylesheet" />
-		<style>
-			body {
-				font-family: "JetBrains Mono", monospace;
-			}
-		</style>
-	</head>
-	<body
-		class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white flex flex-col items-center justify-center min-h-screen"
-	>
-		<!-- Navbar -->
-		<nav
-			class="w-full py-4 px-8 flex justify-between items-center bg-opacity-10 bg-white shadow-lg"
-		>
-			<h1 class="text-3xl font-bold text-purple-300">🌌 Astro</h1>
-			<div class="flex space-x-6">
-				<a
-					href="#"
-					class="px-4 py-2 text-white hover:text-purple-300 transition duration-300"
-					>🏠 Home</a
-				>
-				<a
-					href="#"
-					class="px-4 py-2 text-white hover:text-purple-300 transition duration-300"
-					>📖 About</a
-				>
-				<a
-					href="#"
-					class="px-4 py-2 text-white hover:text-purple-300 transition duration-300"
-					>🔭 Services</a
-				>
-				<a
-					href="#"
-					class="px-4 py-2 text-white hover:text-purple-300 transition duration-300"
-					>✉️ Contact</a
-				>
-				<a
-					href="#"
-					class="px-4 py-2 text-white hover:text-purple-300 transition duration-300"
-					>📝 Blog</a
-				>
-			</div>
-		</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../styles/tailwind.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "JetBrains Mono", monospace;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white flex flex-col items-center justify-center min-h-screen"
+  >
+    <Navbar />
 
-		<!-- Main Content -->
-		<main class="flex flex-col items-center justify-center mt-20">
-			<h2 class="text-5xl font-bold text-center mb-6">Explore the Cosmos</h2>
-			<p class="text-xl text-center mb-6">
-				Discover the mysteries of the universe with our expert guidance.
-			</p>
-			<button
-				class="bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-900 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full mb-12"
-				>Get Started</button
-			>
+    <Maincontent />
 
-			<!-- Feature Cards -->
-			<div class="flex flex-wrap justify-center gap-8">
-				<div class="max-w-sm bg-gradient-to-r from-indigo-800 to-indigo-900 rounded-lg shadow-lg p-6">
-					<h3 class="text-2xl font-bold mb-2">Star Gazing</h3>
-					<p class="text-gray-300 mb-4">
-						Experience the night sky like never before with our state-of-the-art
-						telescopes.
-					</p>
-					<button
-						class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-full"
-						>Learn More</button
-					>
-				</div>
-				<div class="max-w-sm bg-gradient-to-r from-indigo-800 to-indigo-900 rounded-lg shadow-lg p-6">
-					<h3 class="text-2xl font-bold mb-2">Astro Photography</h3>
-					<p class="text-gray-300 mb-4">
-						Capture the beauty of the cosmos with our guided photography
-						sessions.
-					</p>
-					<button
-						class="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-700 hover:to-green-500 text-white font-bold py-2 px-4 rounded-full"
-						>Learn More</button
-					>
-				</div>
-				<div class="max-w-sm bg-gradient-to-r from-indigo-800 to-indigo-900 rounded-lg shadow-lg p-6">
-					<h3 class="text-2xl font-bold mb-2">Space Tours</h3>
-					<p class="text-gray-300 mb-4">
-						Take virtual tours of the solar system and beyond with our immersive
-						experiences.
-					</p>
-					<button
-						class="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-700 hover:to-red-500 text-white font-bold py-2 px-4 rounded-full"
-						>Learn More</button
-					>
-				</div>
-			</div>
-		</main>
+    <!-- Testimonials -->
+    <section
+      class="w-full py-20  text-center"
+    >
+      <h2 class="text-4xl font-bold mb-10">What Our Clients Say</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div
+          class="max-w-md rounded-lg shadow-lg p-6"
+        >
+          <p class="text-gray-300 mb-4">
+            "Astro's star gazing experience was out of this world! Highly
+            recommend."
+          </p>
+          <h4 class="text-xl font-bold">- Jane Doe</h4>
+        </div>
+        <div
+          class="max-w-md rounded-lg shadow-lg p-6"
+        >
+          <p class="text-gray-300 mb-4">
+            "The astro photography session was amazing. I got some incredible
+            shots."
+          </p>
+          <h4 class="text-xl font-bold">- John Smith</h4>
+        </div>
+        <div
+          class="max-w-md  rounded-lg shadow-lg p-6"
+        >
+          <p class="text-gray-300 mb-4">
+            "The virtual space tours are a must-try. Truly immersive and
+            educational."
+          </p>
+          <h4 class="text-xl font-bold">- Sarah Lee</h4>
+        </div>
+      </div>
+    </section>
 
-		<!-- Footer -->
-		<footer class="w-full py-6 bg-gradient-to-r from-indigo-900 to-purple-900 text-center mt-20">
-			<p class="text-gray-400">&copy; 2024 Astro. All rights reserved.</p>
-		</footer>
-	</body>
+    <!-- Newsletter Signup -->
+    <section
+      class="w-full py-20 bg-gradient-to-r from-indigo-800 to-indigo-900 text-center"
+    >
+      <h2 class="text-4xl font-bold mb-10">Stay Updated</h2>
+      <p class="text-xl mb-6">
+        Subscribe to our newsletter to get the latest updates and offers.
+      </p>
+      <form class="flex flex-col items-center">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="w-80 p-3 mb-4 rounded-full text-black"
+        />
+        <button
+          type="submit"
+          class="bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-900 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full"
+          >Subscribe</button
+        >
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section
+      class="w-full py-20 b text-center"
+    >
+      <h2 class="text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+      <div class="max-w-4xl mx-auto text-left">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold mb-2">What is Astro?</h3>
+          <p class="text-gray-300">
+            Astro is a platform that offers various astronomy-related
+            experiences, including star gazing, astro photography, and virtual
+            space tours.
+          </p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold mb-2">How can I book a session?</h3>
+          <p class="text-gray-300">
+            You can book a session through our website by selecting the desired
+            experience and following the booking instructions.
+          </p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold mb-2">
+            Do I need any special equipment?
+          </h3>
+          <p class="text-gray-300">
+            No special equipment is needed. We provide all necessary equipment
+            for our sessions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="w-full py-6 bg-gradient-to-r from-red-500 to-indigo-900 text-center mt-20"
+    >
+      <p class="text-gray-400">&copy; 2024 Astro. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
-<!-- Testimonials -->
-<section class="w-full py-20 bg-gradient-to-r from-purple-800 to-purple-900 text-center">
-	<h2 class="text-4xl font-bold mb-10">What Our Clients Say</h2>
-	<div class="flex flex-wrap justify-center gap-8">
-		<div class="max-w-md bg-gradient-to-r from-indigo-700 to-indigo-800 rounded-lg shadow-lg p-6">
-			<p class="text-gray-300 mb-4">
-				"Astro's star gazing experience was out of this world! Highly
-				recommend."
-			</p>
-			<h4 class="text-xl font-bold">- Jane Doe</h4>
-		</div>
-		<div class="max-w-md bg-gradient-to-r from-indigo-700 to-indigo-800 rounded-lg shadow-lg p-6">
-			<p class="text-gray-300 mb-4">
-				"The astro photography session was amazing. I got some incredible
-				shots."
-			</p>
-			<h4 class="text-xl font-bold">- John Smith</h4>
-		</div>
-		<div class="max-w-md bg-gradient-to-r from-indigo-700 to-indigo-800 rounded-lg shadow-lg p-6">
-			<p class="text-gray-300 mb-4">
-				"The virtual space tours are a must-try. Truly immersive and
-				educational."
-			</p>
-			<h4 class="text-xl font-bold">- Sarah Lee</h4>
-		</div>
-	</div>
-</section>
-
-<!-- Newsletter Signup -->
-<section class="w-full py-20 bg-gradient-to-r from-indigo-800 to-indigo-900 text-center">
-	<h2 class="text-4xl font-bold mb-10">Stay Updated</h2>
-	<p class="text-xl mb-6">
-		Subscribe to our newsletter to get the latest updates and offers.
-	</p>
-	<form class="flex flex-col items-center">
-		<input
-			type="email"
-			placeholder="Enter your email"
-			class="w-80 p-3 mb-4 rounded-full text-black"
-		/>
-		<button
-			type="submit"
-			class="bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-900 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full"
-			>Subscribe</button
-		>
-	</form>
-</section>
-
-<!-- FAQ -->
-<section class="w-full py-20 bg-gradient-to-r from-purple-800 to-purple-900 text-center">
-	<h2 class="text-4xl font-bold mb-10">Frequently Asked Questions</h2>
-	<div class="max-w-4xl mx-auto text-left">
-		<div class="mb-6">
-			<h3 class="text-2xl font-bold mb-2">What is Astro?</h3>
-			<p class="text-gray-300">
-				Astro is a platform that offers various astronomy-related experiences,
-				including star gazing, astro photography, and virtual space tours.
-			</p>
-		</div>
-		<div class="mb-6">
-			<h3 class="text-2xl font-bold mb-2">How can I book a session?</h3>
-			<p class="text-gray-300">
-				You can book a session through our website by selecting the desired
-				experience and following the booking instructions.
-			</p>
-		</div>
-		<div class="mb-6">
-			<h3 class="text-2xl font-bold mb-2">Do I need any special equipment?</h3>
-			<p class="text-gray-300">
-				No special equipment is needed. We provide all necessary equipment for
-				our sessions.
-			</p>
-		</div>
-	</div>
-</section>
